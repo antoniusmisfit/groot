@@ -1,4 +1,4 @@
-//Modified minimal Felker init to enable running in proo
+//Modified minimal Felker init to enable running in proot
 #include <signal.h>
 #include <unistd.h>
 
