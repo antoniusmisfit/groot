@@ -1,4 +1,4 @@
 groot: groot.c
- cc groot.c -o groot
+        gcc groot.c -o groot
 strip: groot
- strip groot
+        strip groot
