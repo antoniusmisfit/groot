@@ -21,8 +21,7 @@ int main(int argc,char* argv[])
 
         setsid();
         setpgid(0, 0);
-        return execve("/etc/rc", (char *[]){ "rc", 0 }, (char *[]){ 0 }
-}
+        return execve("/etc/rc", (char *[]){ "rc", 0 }, (char *[]){ 0 });
 
 int proot_mode(int argc, char* argv[])
 {
