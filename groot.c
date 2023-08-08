@@ -28,3 +28,4 @@ int proot_mode(int argc, char* argv[])
 {
 //proot-specific setup here
 return execve("/etc/rc", (char* []){"rc",0}, (char* []){0});
+}
