@@ -26,5 +26,5 @@ int main(int argc,char* argv[])
 int proot_mode(int argc, char* argv[])
 {
 //proot-specific setup here
-return execve("/etc/rc", (char* []){"rc",0}, (char* []){0});
+return execve("/etc/rc", (char *[]){ "rc", 0 }, (char *[]){ 0 });
 }
