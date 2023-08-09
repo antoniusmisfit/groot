@@ -1,5 +1,5 @@
 //Modified minimal Felker init to enable running in proot
-#define _XOPEN_SOURCE 700
+//#define _XOPEN_SOURCE 700
 #include <signal.h>
 #include <unistd.h>
 
