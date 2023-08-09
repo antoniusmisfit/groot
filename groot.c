@@ -3,12 +3,12 @@
 #include <signal.h>
 #include <unistd.h>
 
+static sigset_t set;
+static int status;
 int proot_mode(int argc, char* argv[]);
 
 int main(int argc,char* argv[])
 {
-        sigset_t set;
-        int status;
         //If we're not PID-1, then we're in proot
         if (getpid() != 1) return proot_mode(argc,argv);;
 
@@ -27,5 +27,6 @@ int main(int argc,char* argv[])
 int proot_mode(int argc, char* argv[])
 {
 //proot-specific setup here
+sigfillset(&set);
 return execve("/etc/rc", (char *[]){ "rc", 0 }, (char *[]){ 0 });
 }
